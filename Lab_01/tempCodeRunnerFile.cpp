@@ -42,12 +42,12 @@ int main() {
 
     // ---------------- AVERAGE CASE (Medium dense graph) ----------------
     vector<vector<pair<int,int>>> avg(V + 1);
-    srand(42);
+    
     for (int i = 1; i <= V; i++) {
         for (int j = 0; j < 4; j++) { // each node connected to 4 random nodes
             int r = rand() % V + 1;
             if (r != i)
-                avg[i].push_back({r, rand() % 10 + 1});
+               avg[i].push_back({r, rand() % 10 + 1});
         }
     }
 
