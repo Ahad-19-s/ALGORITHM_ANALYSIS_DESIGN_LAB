@@ -11,20 +11,7 @@ struct Node {
     }
 };
 
-/*
-BST Operation Time Complexities:
------------------------------------
-Insert       → O(h)
-Find Min/Max → O(h)
-Successor    → O(h)
-Predecessor  → O(h)
-Delete       → O(h)
-Traversal    → O(n)
-where h = height of BST
-*/
 
-// ----------------------------------------------------
-// INSERT - O(h)
 Node* insert(Node* root, int val) {
     if (root == NULL)
         return new Node(val);
@@ -35,7 +22,6 @@ Node* insert(Node* root, int val) {
     return root;
 }
 
-// ----------------------------------------------------
 // FIND MINIMUM - O(h)
 Node* findMin(Node* root) {
     while (root && root->left)
